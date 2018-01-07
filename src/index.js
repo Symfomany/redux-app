@@ -6,6 +6,10 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import allReducers from './reducers';
 import { Provider } from 'react-redux';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+
+import './assets/sass/main.scss';
 
 // for Chrome Extension with redux DevTool
 const enhancers = composeWithDevTools();

@@ -6,10 +6,23 @@ import { selectUser } from '../actions/index'
 
 class UserList extends Component {
 
+
+
+    filterList() {
+        if (this.props.word && this.props.word.length > 2) {
+            const reg = new RegExp(this.props.word, "i")
+            return this.props.users.filter((user) => reg.test(user.name));
+        }
+        return this.props.users;
+
+    }
+
     renderList() {
-        return this.props.users.map((user) => {
+
+        return this.filterList().map((user) => {
             return (
                 <li
+                    className="list-group-item"
                     key={user.id}
                     onClick={() => this.props.selectUser(user)}
                 >
@@ -21,7 +34,7 @@ class UserList extends Component {
 
     render() {
         return (
-            <ul>
+            <ul className="list-group">
                 {this.renderList()}
             </ul>
         );
@@ -33,7 +46,8 @@ class UserList extends Component {
 //      > whenever state changes, the UserList will automatically re-render
 function mapStateToProps(state) {
     return {
-        users: state.users
+        users: state.users.liste,
+        word: state.word
     };
 }
 
