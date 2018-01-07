@@ -3,20 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
-    "react-scripts": "1.0.17",
     "redux": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest --notify",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "babel-jest": "^22.0.4",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "jest": "^22.0.4",
+    "react-addons-test-utils": "^15.6.2",
+    "react-scripts": "^1.0.17",
+    "react-test-renderer": "^16.2.0",
     "redux-devtools": "^3.4.1",
-    "redux-devtools-extension": "^2.13.2"
+    "redux-devtools-extension": "^2.13.2",
+    "redux-mock-store": "^1.4.0"
   }
 }

@@ -5,7 +5,9 @@ class Navbar extends Component {
     state = {}
     render() {
         return (
-            <h1>Application Users List</h1>
+            <header className="header">
+                <h1>Application Users List</h1>
+            </header>
         );
     }
 }
