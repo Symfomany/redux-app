@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import UserList from './containers/user-list';
 import UserDetails from './containers/user-detail';
 import Navbar from './components/navbar';
+import Search from './components/search';
 
 
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
     return (
       <div>
         <Navbar></Navbar>
+        <Search />
         <h2>User List</h2>
         <UserList />
         <hr />
